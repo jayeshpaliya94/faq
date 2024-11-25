@@ -1,0 +1,25 @@
+ 
+<?php $collection = $this->getFaqData();?>
+<div class="table-wrapper">
+        <table class="data table">
+            <thead>
+                <tr>
+                    <th scope="col" class="col"><?= $block->escapeHtml(__('User Name')) ?></th>
+                    <th scope="col" class="col"><?= $block->escapeHtml(__('Email')) ?></th> 
+                    <th scope="col" class="col"><?= $block->escapeHtml(__('Question')) ?></th>
+                    <th scope="col" class="col"><?= $block->escapeHtml(__('User Note')) ?></th> 
+                </tr>
+            </thead>
+            <tbody>
+              <?php foreach ($collection as $data): ?>
+                <tr>
+                    <td><?= $block->escapeHtml($data->getName()) ?></td>
+                    <td><?= $block->escapeHtml($data->getEmail()) ?></td>
+                    <td><?= $block->escapeHtml($data->getQuestion()) ?></td>
+                    <td><?= $block->escapeHtml($data->getNotes()) ?></td>
+                   
+                </tr>
+                <?php endforeach; ?>
+           </tbody>
+        </table>
+    </div>

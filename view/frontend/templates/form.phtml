@@ -1,0 +1,48 @@
+<h2><?php //echo $this->getHelloWorldTxt(); ?></h2> 
+ 
+ <form class="form"
+      action="<?php echo $block->getBaseUrl().'faq/index/post/';?>"
+      id="contact-form"
+      method="post"
+      data-hasrequired="<?= $block->escapeHtmlAttr(__('* Required Fields')) ?>"
+      data-mage-init='{"validation":{}}'>
+ <fieldset class="fieldset">
+        
+        <div class="field User name required">
+            <label class="label" for="name"><span><?= $block->escapeHtml(__('User name')) ?></span></label>
+            <div class="control">
+                <input name="name" id="name" title="<?= $block->escapeHtmlAttr(__('User name')) ?>" value="<?php // echo $block->getUserName(); ?>" class="input-text" type="text" data-validate="{required:true,'validate-alphanum-with-spaces':true}"/>                 
+            </div>
+        </div>
+        <div class="field email required">
+            <label class="label" for="email"><span><?= $block->escapeHtml(__('Email')) ?></span></label>
+            <div class="control">
+                <input name="email" id="email" title="<?= $block->escapeHtmlAttr(__('Email')) ?>" value="" class="input-text" type="email" data-validate="{required:true, 'validate-email':true}"/>
+            </div>        </div>
+        
+        <div class="field product question required">
+            <label class="label" for="question"><span><?= $block->escapeHtml(__('Question')) ?></span></label>
+            <div class="control">
+                <textarea name="question" id="question" title="<?= $block->escapeHtmlAttr(__('users question')) ?>" class="input-text" cols="5" rows="3" data-validate="{required:true}"></textarea>
+            </div>
+        </div>        
+         
+        <div class="field customer note">
+            <label class="label" for="notes"><span>
+            <?= $block->escapeHtml(__('User Note')) ?></span></label>
+            <div class="control">
+                <textarea name="notes" id="notes" title="<?= $block->escapeHtmlAttr(__('user note')) ?>" class="input-text" cols="5" rows="3" data-validate="{required:true}"></textarea>
+               
+            </div>
+        </div>         
+        
+        <?= $block->getChildHtml('form.additional.info') ?>
+    </fieldset>
+    <div class="actions-toolbar">
+        <div class="primary">
+            <button type="submit" title="<?= $block->escapeHtmlAttr(__('Submit')) ?>" class="action submit primary">
+                <span><?= $block->escapeHtml(__('Submit')) ?></span>
+            </button>
+        </div>
+    </div>
+</form>

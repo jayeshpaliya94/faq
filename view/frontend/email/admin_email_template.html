@@ -1,0 +1,28 @@
+<!--@subject Sending email from my custom module @-->
+ 
+{{template config_path="design/email/header_template"}}
+<table class="message-details" border="2">
+    <thead>
+        <th>user Information</th>
+        </thead>
+    <tbody>
+    <tr>
+        <td><strong>User Name</strong></td>
+        <td>{{var name}}</td>
+    </tr>
+    <tr>
+        <td><strong>Email</strong></td>
+        <td>{{var email}}</td>
+    </tr>
+    <tr>
+        <td><strong>Quesation</strong></td>
+        <td>{{var Question}}</td>
+    </tr>
+    <tr>
+        <td><strong>User note</strong></td>
+        <td>{{var user_note}}</td>
+    </tr>
+    </tbody>
+</table>
+ 
+{{template config_path="design/email/footer_template"}}

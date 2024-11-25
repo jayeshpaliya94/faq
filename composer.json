@@ -1,0 +1,19 @@
+{
+    "name": "commercepundit/faq",
+    "description": "Frequenty Asked Question Module",
+    "require": {
+        "php": "~7.1.3||~7.2.0||~7.3.0",
+        "magento/framework": "102.0.*",
+        "magento/module-store": "101.0.*"
+    },
+    "type": "magento2-module",
+    "autoload": {
+        "files": [
+            "registration.php"
+        ],
+        "psr-4": {
+            "Commercepundit\\Faq\\": ""
+        }
+    },
+    "version": "1.0.0"
+}

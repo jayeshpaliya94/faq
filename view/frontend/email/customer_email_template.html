@@ -1,0 +1,42 @@
+<!--
+/**
+ * Copyright © Magento, Inc. All rights reserved.
+ * See COPYING.txt for license details.
+ *
+-->
+ <!--@subject {{trans "Welcome to %store_name" store_name=$store.getFrontendName()}} @-->
+<!--@Faq Sending email from my custom Faq module @-->
+
+<!--@vars {
+"var name":"Customer Name",
+"var email":"Customer Email",
+"var question":"Customer Question",
+"var user_note":"Customer Users Note",
+} @-->
+{{template config_path="design/email/header_template"}}
+ 
+<table class="message-details" border="2">
+    <thead>
+        <th colspan="2">user Information</th>
+    </thead>
+    <tbody>
+    <tr>
+        <td><strong>User Name</strong></td>
+        <td>{{var name}}</td>
+    </tr>
+    <tr>
+        <td><strong>Email</strong></td>
+        <td>{{var email}}</td>
+    </tr>
+    <tr>
+        <td><strong>Quesation</strong></td>
+        <td>{{var question}}</td>
+    </tr>
+    <tr>
+        <td><strong>User note</strong></td>
+        <td>{{var user_note}}</td>
+    </tr>
+    </tbody>
+</table>
+ 
+{{template config_path="design/email/footer_template"}}

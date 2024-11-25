@@ -1,0 +1,17 @@
+{
+    "commercepundit_faq": {
+        "column": {
+            "faq_id": true,
+            "store_id": true,
+            "name": true,
+            "email": true,
+            "question": true,
+            "notes": true,
+            "status": true
+        },
+        "constraint": {
+            "PRIMARY": true,
+            "COMMERCEPUNDIT_FAQ_STORE_ID_STORE_STORE_ID": true
+        }
+    }
+}
